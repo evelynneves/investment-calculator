@@ -1,0 +1,219 @@
+/******************************************************************************
+*                                                                             *
+* Creation Date : 10/12/2024                                                  *
+*                                                                             *
+* Property : (c) This program, code or item is the Intellectual Property of   *
+* Evelyn Neves Barreto. Any use or copy of this code is prohibited without    *
+* the express written authorization of Evelyn. All rights reserved.           *
+*                                                                             *
+*******************************************************************************/
+
+:root {
+    --primary-color: #820ad1;
+    --primary-hover: #9b30e0;
+    --background: #f5f5f5;
+    --card-bg: #ffffff;
+    --text: #2f2f2f;
+    --text-secondary: #666666;
+    --border: #e0e0e0;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --font-family: 'Graphik', -apple-system, system-ui, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background);
+    color: var(--tex);
+    line-height: 15px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 60px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+main {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 32px;
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--tex);
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    height: 54px;
+    padding: 10px;
+    padding-left: 25px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(130, 10, 209, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--card-bg);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 15px;
+}
+
+button:hover:not(:disabled) {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(130, 10, 209, 0.2);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+td, td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+th {
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    background-color: rgba(130, 10, 209, 0.05);
+    letter-spacing: 0.5px;
+}
+
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+td {
+    font-size: 12px;
+    height: 54px;
+    color: var(--tex);
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: rgba(130, 10, 209, 0.02);
+}
+
+#no-results {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 30px 0;
+    font-size: 12px;
+}

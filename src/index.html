@@ -1,0 +1,92 @@
+<!--
+    /******************************************************************************
+    *                                                                             *
+    * Creation Date : 10/12/2024                                                  *
+    *                                                                             *
+    * Property : (c) This program, code or item is the Intellectual Property of   *
+    * Evelyn Neves Barreto. Any use or copy of this code is prohibited without    *
+    * the express written authorization of Evelyn. All rights reserved.           *
+    *                                                                             *
+    *******************************************************************************/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Investiment Calculator</title>
+        <link rel="icon" href="favicon.svg" type="image/svg">
+        <link rel="stylesheet" href="styles.css">
+        <script type="module" src="main.js"></script>
+    </head>
+    <bod>
+        <div class="container">
+            <header>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="#820ad1" stroke-width="1.5">
+                    <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg>
+                <h1>Investiment Calculator</h1>
+                <p>Take control of your financial future with our smart investment calculator</p>
+            </header>
+
+            <main>
+                <div class="card">
+                    <h2>Investment Details</h2>
+                    <form id="investment-form">
+                        <div class="form-group">
+                            <label for="initial-amount">Initial Investiment</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">$</span>
+                                <input type="number" id="initial-amount" value="1000" min="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="monthly-contribution">Monthly Contribution</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">$</span>
+                                <input type="number" id="monthly-contribution" value="100" min="1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="annual-interest">Annual Interest Rate</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">%</span>
+                                <input type="number" id="annual-interest" value="10" min="1" step="0.1" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="investment-years">Investiment Period</label>
+                            <div class="input-wrapper">
+                                <span class="input-icon">Y</span>
+                                <input type="number" id="investment-years" value="5" min="1" max="50" required>
+                            </div>
+                        </div>
+                        <button type="submit" id="calculate-btn">Calculate Investment</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Investment Growth</h2>
+                    <div id="no-results">
+                        Enter your investment details to see your potential returns
+                    </div>
+                    <table id="results-table" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Balance</th>
+                                <th>Total Invested</th>
+                                <th>Returns</th>
+                            </tr>
+                        </thead>
+                        <tbody id="results-body"></tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+    </bod>
+</html>

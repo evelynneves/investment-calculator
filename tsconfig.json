@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "moduleResolution": "node",
+        "module": "ES2022",
+        "target": "ES2022",
+        "noEmitOnError": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"],
+    "watchOptions": {
+        "watchFile": "useFsEvents",
+        "watchDirectory": "useFsEvents"
+    }
+}

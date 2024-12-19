@@ -1,0 +1,5 @@
+# Node.js Dependencies
+node_modules/
+
+# Ignore TypeScript build output
+dist/
